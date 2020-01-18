@@ -81,24 +81,6 @@
     let currentpage = document.getElementById(`page1`);
     let body = document.getElementById('body');
 
-    /*function wordHeightChecker() {
-        for (j = 0; j < pagewords.length; j++) {
-            totalHeight += document.getElementById(`${pagewords[j]}`).offsetHeight;
-            console.log(totalHeight);
-            console.log(document.getElementById(`${pagewords[j]}`));
-            if (totalHeight >= h) {
-                page++;
-                pagewords.length = 0;
-                body.innerHTML += `<div class="PDFcontainer" id="page${page}">
-                                    <div class="header">
-                                        <p>Tere see on mingi pealdis</p>
-                                    </div>
-                                </div>`;
-                totalHeight = 0;
-                currentpage = document.getElementById(`page${page}`);
-            }
-        }
-    }*/
     for (i = 0 ; i !== words.length; i++) {
         //Make a new word
         pagewords.push(`word${i}`);
