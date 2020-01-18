@@ -75,14 +75,13 @@
         @endforeach
     ];
     const h = 1120;
-    const pages = [];
     let pagewords = [];
     let totalHeight = 0;
     let page = 1;
     let currentpage = document.getElementById(`page1`);
     let body = document.getElementById('body');
 
-    function wordHeightChecker() {
+    /*function wordHeightChecker() {
         for (j = 0; j < pagewords.length; j++) {
             totalHeight += document.getElementById(`${pagewords[j]}`).offsetHeight;
             console.log(totalHeight);
@@ -99,9 +98,8 @@
                 currentpage = document.getElementById(`page${page}`);
             }
         }
-    }
-
-    for (i = 0; i <= words.length; i++) {
+    }*/
+    for (i = 0 ; i <= words.length; i++) {
         pagewords.push(`word${i}`);
         currentpage.innerHTML += `<div class="word" id="word${i}">
                                             <h1>${words[i][0]}</h1>
@@ -117,7 +115,18 @@
                                             </div>
                                         </div>
                                     </div>`;
-        wordHeightChecker();
+        totalHeight += document.getElementById(`word${[i]}`).offsetHeight;
+        if(totalHeight >= h - 200){
+            page++;
+            pagewords.length = 0;
+            body.innerHTML += `<div class="PDFcontainer" id="page${page}">
+                                    <div class="header">
+                                        <p>Tere see on mingi pealdis</p>
+                                    </div>
+                                </div>`;
+            totalHeight = 0;
+            currentpage = document.getElementById(`page${page}`);
+        }
     }
 
 </script>
