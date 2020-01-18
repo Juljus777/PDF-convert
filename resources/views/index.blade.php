@@ -99,7 +99,7 @@
             }
         }
     }*/
-    for (i = 0 ; i <= words.length; i++) {
+    for (i = 0 ; i !== words.length; i++) {
         //Make a new word
         pagewords.push(`word${i}`);
         currentpage.innerHTML += `<div class="word" id="word${i}">
@@ -118,7 +118,7 @@
                                     </div>`;
         //Make a new page if all the words height < page height
         totalHeight += document.getElementById(`word${[i]}`).offsetHeight;
-        if(totalHeight >= h - 200){
+        if(totalHeight >= h - 300 && words[i+1] !== undefined){
             page++;
             pagewords.length = 0;
             body.innerHTML += `<div class="PDFcontainer" id="page${page}">

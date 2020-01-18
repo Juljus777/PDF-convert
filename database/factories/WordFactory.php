@@ -6,11 +6,14 @@ use App\Word;
 use Faker\Generator as Faker;
 
 $factory->define(Word::class, function (Faker $faker) {
+    $i = rand(10,30);
+    $j = rand(5,15);
+    $l = rand(1,2);
     return [
-        'word' => $faker->words(2, true),
-        'translation' => $faker->words(2, true),
-        'category' => $faker->words(2, true),
-        'explanation' => $faker->sentence(30, true),
-        'extra' => $faker->sentence(10, true),
+        'word' => $faker->words($l, true),
+        'translation' => $faker->words($l, true),
+        'category' => $faker->words($l, true),
+        'explanation' => $faker->sentence($i, true),
+        'extra' => $faker->sentence($j, true),
     ];
 });
