@@ -13,10 +13,10 @@
         .PDFcontainer {
             position: relative;
             width: 794px;
-            height: 1120px;
+            height: 1122px;
             left: 50%;
             transform: translate(-50%, 0%);
-            background-color: #f5f5f5;
+            background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,207,198,1) 100%);
         }
 
         .header {
@@ -30,7 +30,7 @@
 
         hr {
             color: black;
-            margin: 10px 0px;
+            margin: 10px 0;
         }
 
         .word {
@@ -74,7 +74,7 @@
         ["{{ $word->word }}", "{{ $word->translation }}", "{{$word->category}}", "{{$word->explanation}}", "{{$word->extra}}"],
         @endforeach
     ];
-    const h = 1120;
+    const h = 1122;
     let pagewords = [];
     let totalHeight = 0;
     let page = 1;
