@@ -70,8 +70,12 @@
 </div>
 <script type="text/javascript">
     const words = [
-            @foreach ($words as $word)
-        ["{{ $word->word }}", "{{ $word->translation }}", "{{$word->category}}", "{{$word->explanation}}", "{{$word->extra}}"],
+        @foreach ($words as $word)
+            ["{{ $word->word }}",
+            "{{ $word->translation }}",
+            "{{$word->category}}",
+            "{{$word->explanation}}",
+            "{{$word->extra}}"],
         @endforeach
     ];
     const h = 1122;
@@ -99,6 +103,7 @@
                                         </div>
                                     </div>`;
         //Make a new page if all the words height < page height
+        //and dont make a new one if there are no further words to add
         totalHeight += document.getElementById(`word${[i]}`).offsetHeight;
         if(totalHeight >= h - 300 && words[i+1] !== undefined){
             page++;
