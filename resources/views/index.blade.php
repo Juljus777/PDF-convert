@@ -100,6 +100,7 @@
         }
     }*/
     for (i = 0 ; i <= words.length; i++) {
+        //Make a new word
         pagewords.push(`word${i}`);
         currentpage.innerHTML += `<div class="word" id="word${i}">
                                             <h1>${words[i][0]}</h1>
@@ -115,6 +116,7 @@
                                             </div>
                                         </div>
                                     </div>`;
+        //Make a new page if all the words height < page height
         totalHeight += document.getElementById(`word${[i]}`).offsetHeight;
         if(totalHeight >= h - 200){
             page++;
@@ -128,7 +130,6 @@
             currentpage = document.getElementById(`page${page}`);
         }
     }
-
 </script>
 </body>
 </html>
