@@ -16,7 +16,7 @@
             height: 1122px;
             left: 50%;
             transform: translate(-50%, 0%);
-            background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,207,198,1) 100%);
+            background-color:white;
         }
 
         .header {
@@ -60,12 +60,81 @@
         .explanationP {
             margin-bottom: 10px;
         }
+        #cover{
+            position:relative;
+            background: linear-gradient(0deg, rgba(230,87,88,1) 0%, rgba(119,29,50,1) 100%);
+        }
+        #cover p {
+            color:white;
+        }
+        #backCover{
+            position:relative;
+            background: linear-gradient(0deg, rgba(230,87,88,1) 0%, rgba(119,29,50,1) 100%);
+        }
+        .coverContainer{
+            position:relative;
+            left:50%;
+            top:40%;
+            transform:translate(-50%,-40%);
+        }
+        .coverTitle{
+            text-align:center;
+            position: relative;
+            transform: translate(-50%,0%);
+            left:50%;
+            font-size:40px;
+        }
+        .coverYear{
+            text-align:center;
+            position: relative;
+            transform: translate(-50%,0%);
+            left:50%;
+            font-size:30px;
+        }
+        .authorSection{
+            position:relative;
+            width:90%;
+            top:70%;
+            transform: translate(-50%,-70%);
+            left:50%;
+        }
+        .pageNumber{
+            position:relative;
+            max-width:30px;
+            top:90%;
+            left:95%;
+            transform: translate(-95%,0);
+        }
+        .menu{
+            position:absolute;
+            height:100px;
+            width:100px;
+        }
     </style>
 </head>
 <body id="body">
+<div class="menu">
+    <a href="/makepdf"><button>make pdf</button></a>
+</div>
+<div class="PDFcontainer" id="cover">
+    <div class="coverContainer">
+        <div class="coverTitle">
+            <p>Lorem Ipsium Sõnaraamat</p>
+        </div>
+        <div class="coverYear">
+            <p>2019</p>
+        </div>
+    </div>
+    <div class="authorSection">
+        <p>Autor: Juljus Pärt</p>
+    </div>
+</div>
 <div class="PDFcontainer" id="page1">
     <div class="header">
         <p>Tere see on mingi pealdis</p>
+    </div>
+    <div class="pageNumber">
+        <p id="pageNumber">1</p>
     </div>
 </div>
 <script type="text/javascript">
@@ -84,7 +153,7 @@
     let page = 1;
     let currentpage = document.getElementById(`page1`);
     let body = document.getElementById('body');
-
+    words.sort();
     for (i = 0 ; i !== words.length; i++) {
         //Make a new word
         pagewords.push(`word${i}`);
@@ -112,11 +181,17 @@
                                     <div class="header">
                                         <p>Tere see on mingi pealdis</p>
                                     </div>
+                                    <div class="pageNumber">
+                                        <p id="pageNumber">${page}</p>
+                                    </div>
                                 </div>`;
             totalHeight = 0;
             currentpage = document.getElementById(`page${page}`);
         }
     }
 </script>
+<div class="PDFcontainer" id="backCover">
+
+</div>
 </body>
 </html>

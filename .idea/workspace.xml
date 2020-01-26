@@ -107,6 +107,11 @@
       <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
     </include_path>
   </component>
   <component name="ProjectId" id="1WU5XrvYfnotYrKXz3xl58lzbko" />
@@ -147,7 +152,9 @@
       <updated>1579191375647</updated>
       <workItem from="1579191376888" duration="6933000" />
       <workItem from="1579261816068" duration="9647000" />
-      <workItem from="1579349032184" duration="11036000" />
+      <workItem from="1579349032184" duration="12172000" />
+      <workItem from="1579453144848" duration="3923000" />
+      <workItem from="1580040803537" duration="6196000" />
     </task>
     <servers />
   </component>
@@ -159,7 +166,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

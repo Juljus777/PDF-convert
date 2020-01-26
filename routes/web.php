@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'WordController@index');
+Route::get('makepdf', 'WordController@goto');
+Route::get('makepdf', 'WordController@makepdf');
