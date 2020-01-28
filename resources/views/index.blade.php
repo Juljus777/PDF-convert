@@ -137,6 +137,8 @@
         <p id="pageNumber">1</p>
     </div>
 </div>
+
+
 <script type="text/javascript">
     const words = [
         @foreach ($words as $word)
